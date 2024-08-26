@@ -1,0 +1,174 @@
+/* Estilos gerais para o documento */
+
+/* Definição de variáveis de CSS no :root para uso em todo o documento */
+:root {
+    /* Gradiente azul usado como fundo */
+    --azul-degrade: linear-gradient(to bottom, #000000, #131730, #232e74);
+}
+
+/* Garantir que html e body cubram toda a altura da página e permitam rolagem */
+html, body {
+    height: 100%; /* Define a altura de html e body como 100% da altura da viewport */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o padding padrão */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões do elemento */
+    overflow: auto; /* Permite rolagem se necessário */
+}
+
+/* Estilo para o corpo da página */
+body {
+    /* Fonte padrão */
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o corpo da página */
+    /* Aplica o gradiente de fundo definido anteriormente */
+    background: var(--azul-degrade); /* Define o gradiente como fundo */
+    /* Configura o corpo como um contêiner flexível para centralizar o conteúdo */
+    display: flex; /* Define o corpo como um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    /* Define a altura mínima como 100% da altura da viewport */
+    min-height: 100vh; /* Define a altura mínima como 100% da altura da viewport */
+    background-attachment: fixed; /* Faz com que o fundo cubra toda a área */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões do corpo */
+    margin: 0; /* Garante que não haja margem extra */
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    /* Define a largura máxima e centraliza o contêiner */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    max-width: 400px; /* Define a largura máxima como 400px */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 20px; /* Adiciona padding interno ao contêiner */
+    /* Define o fundo branco e aplica bordas arredondadas e sombra sutil */
+    background-color: white; /* Define a cor de fundo como branco */
+    border-radius: 10px; /* Aplica bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões do contêiner */
+}
+
+/* Estilo para a seção do banner */
+.banner {
+    /* Centraliza o banner */
+    display: flex; /* Define o banner como um contêiner flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+}
+
+/* Estilo para a imagem do banner */
+.banner-img {
+    /* Faz com que a imagem ocupe a largura máxima disponível */
+    max-width: 100%; /* Define a largura máxima como 100% do contêiner pai */
+}
+
+/* Estilo para a área de input */
+.input-area {
+    /* Alinha os itens verticalmente e centraliza */
+    display: flex; /* Define a área de input como um contêiner flexível */
+    flex-direction: column; /* Alinha os itens na coluna */
+    align-items: center; /* Alinha os itens no centro horizontalmente */
+    margin-bottom: 20px; /* Adiciona uma margem inferior de 20px */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* Estilo para o campo de texto */
+input[type="text"] {
+    /* Define a largura, padding, borda e arredondamento do campo de texto */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    padding: 10px; /* Adiciona padding interno ao campo de texto */
+    border: 1px solid #ccc; /* Define a borda como sólida e cinza claro */
+    border-radius: 25px; /* Aplica bordas arredondadas */
+    font-size: 16px; /* Define o tamanho da fonte */
+    margin-bottom: 10px; /* Adiciona uma margem inferior de 10px */
+    text-align: center; /* Alinha o texto ao centro */
+    /* Adiciona uma sombra sutil ao redor do campo de texto */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/* Estilo para o botão de salvar item */
+.save-button {
+    /* Define padding, cor de fundo, cor do texto, borda e arredondamento do botão */
+    padding: 10px 20px; /* Define o padding interno do botão */
+    background-color: #FF6F61; /* Define a cor de fundo como laranja avermelhado */
+    color: white; /* Define a cor do texto como branco */
+    border: none; /* Remove a borda padrão */
+    border-radius: 25px; /* Aplica bordas arredondadas */
+    cursor: pointer; /* Altera o cursor para pointer ao passar sobre o botão */
+    font-size: 16px; /* Define o tamanho da fonte */
+    width: 100%; /* Define a largura como 100% do contêiner pai */
+    text-align: center; /* Alinha o texto ao centro */
+    /* Adiciona uma sombra sutil ao redor do botão */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+}
+
+/* Estilo para o botão ao passar o mouse */
+.save-button:hover {
+    /* Muda a cor de fundo quando o botão é hovered */
+    background-color: #FF4C41; /* Define uma cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilo para os títulos das seções */
+.section-title {
+    /* Define o tamanho da fonte, cor e alinhamento do título */
+    font-size: 20px; /* Define o tamanho da fonte */
+    color: #FF6F61; /* Define a cor do texto como laranja avermelhado */
+    text-align: center; /* Alinha o texto ao centro */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    margin: 20px 0; /* Adiciona uma margem superior e inferior de 20px */
+    /* Adiciona uma linha pontilhada abaixo do título */
+    position: relative; /* Define o posicionamento como relativo para posicionar o pseudo-elemento */
+}
+
+/* Estilo para a linha pontilhada abaixo dos títulos */
+.section-title:after {
+    content: ''; /* Cria um pseudo-elemento vazio */
+    display: block; /* Exibe o pseudo-elemento como um bloco */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: 1px; /* Define uma altura mínima de 1px */
+    background: #FF6F61; /* Define a cor de fundo como laranja avermelhado */
+    border-bottom: 2px dashed #FF6F61; /* Adiciona uma borda pontilhada na parte inferior */
+    position: absolute; /* Posiciona o pseudo-elemento em relação ao título */
+    bottom: -10px; /* Coloca o pseudo-elemento 10px abaixo do título */
+    left: 0; /* Alinha o pseudo-elemento à esquerda */
+}
+
+/* Estilo para as listas de itens */
+.item-list {
+    list-style-type: none; /* Remove os marcadores padrão da lista */
+    padding: 0; /* Remove o padding interno */
+    margin: 0 0 20px 0; /* Adiciona uma margem inferior de 20px */
+}
+
+/* Estilo para os itens da lista */
+.item-list li {
+    /* Configura cada item da lista como um contêiner flexível */
+    display: flex; /* Define o item da lista como um contêiner flexível */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    padding: 10px 0; /* Adiciona padding interno ao item da lista */
+    /* Adiciona uma borda inferior para separar os itens */
+    border-bottom: 1px solid #ccc; /* Define uma borda inferior sólida e cinza claro */
+}
+
+/* Estilo para os ícones dentro dos itens */
+.item-list li .icons {
+    /* Exibe os ícones em linha e define o espaçamento entre eles */
+    display: flex; /* Define os ícones como um contêiner flexível */
+    gap: 10px; /* Define o espaçamento entre os ícones */
+}
+
+/* Estilo para o checkbox dentro dos itens */
+.item-list li input[type="checkbox"] {
+    margin-right: 10px; /* Adiciona uma margem à direita do checkbox */
+}
+
+/* Estilo para itens marcados como comprados */
+.completed {
+    text-decoration: line-through; /* Aplica um risco no texto */
+    color: #888; /* Muda a cor do texto para cinza */
+}
+
+/* Estilo para os ícones de edição e exclusão */
+.edit-icon img, .delete-icon img {
+    width: 16px; /* Define a largura dos ícones */
+    height: 16px; /* Define a altura dos ícones */
+}
